@@ -12,3 +12,12 @@ allow system_server sysfs_usb_supply:file r_file_perms;
 # Perf
 allow system_server mpctl_data_file:dir r_dir_perms;
 allow system_server mpctl_data_file:sock_file rw_file_perms;
+
+# Set scheduler boost
+allow system_server drmserver:process { getsched setsched };
+allow system_server keystore:process { getsched setsched };
+allow system_server mediacodec:process { getsched setsched };
+allow system_server mediadrmserver:process { getsched setsched };
+allow system_server mediaextractor:process { getsched setsched };
+allow system_server vold:process { getsched setsched };
+allow system_server zygote:process { getsched setsched };
