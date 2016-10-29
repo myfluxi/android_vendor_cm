@@ -5,3 +5,4 @@ allow perfd mediaserver:file { read open };
 
 #cm extra opts
 unix_socket_connect(perfd, thermal, thermal-engine)
+allow perfd mpctl_data_file:sock_file create_file_perms;
